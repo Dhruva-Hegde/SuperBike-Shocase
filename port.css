@@ -1,0 +1,262 @@
+/* Default Dark Mode */
+body {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: #0B0F19;
+    color: white;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    background: linear-gradient(135deg, #1A1F2B, #0B0F19);
+    box-shadow: 0 4px 15px rgba(76, 158, 255, 0.5);
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+/* Superbike Grid */
+.grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+}
+
+/* Superbike Cards */
+.bike-card {
+    width: 280px;
+    padding: 15px;
+    background: linear-gradient(135deg, rgba(0, 230, 230, 0.15), rgba(76, 158, 255, 0.15));
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+.bike-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 230, 230, 0.5);
+}
+
+.bike-card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.bike-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Bike Details Modal */
+.bike-details {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.bike-details.show {
+    display: flex;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, rgba(76, 158, 255, 0.9), rgba(255, 126, 179, 0.9));
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 230, 230, 0.7);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    color: white;
+    animation: slideUp 0.4s ease-in-out;
+}
+
+.bike-details img {
+    width: 300px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+    background: #FF7EB3;
+    color: black;
+}
+
+/* Light Mode */
+.light-mode {
+    background: #F8F9FA;
+    color: black;
+}
+
+.light-mode header {
+    background: linear-gradient(135deg, #F8F9FA, #DCE1E8);
+    color: #004466;
+}
+
+.light-mode .bike-card {
+    background: linear-gradient(135deg, rgba(0, 110, 255, 0.15), rgba(255, 126, 179, 0.15));
+    color: black;
+}
+
+.light-mode .bike-details {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 126, 179, 0.4);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+    background: rgba(255, 126, 179, 0.7);
+}
+
+/* Light Mode Toggle */
+.light-mode #theme-toggle {
+    background: rgba(76, 158, 255, 0.4);
+    color: black;
+}
+
+.light-mode #theme-toggle:hover {
+    background: rgba(76, 158, 255, 0.7);
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: linear-gradient(135deg, #1A1F2B, #0B0F19);
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.light-mode footer {
+    background: #DCE1E8;
+    color: #004466;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Comparison Section */
+.comparison-section {
+    text-align: center;
+    padding: 40px;
+}
+
+.comparison-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+select, button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: #ff7eb3;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4d88;
+}
+
+.comparison-table {
+    display: none;
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.comparison-table th {
+    background-color: #1a1f2b;
+    color: white;
+}
+
+
+
