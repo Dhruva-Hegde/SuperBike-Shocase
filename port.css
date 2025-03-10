@@ -101,7 +101,7 @@ header {
     right: 25px;
     font-size: 30px;
     cursor: pointer;
-    color: white;
+    color: rgb(218, 13, 13);
     background: rgba(255, 255, 255, 0.2);
     padding: 5px 10px;
     border-radius: 50%;
