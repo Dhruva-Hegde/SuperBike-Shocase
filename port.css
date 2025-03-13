@@ -258,5 +258,17 @@ button:hover {
     color: white;
 }
 
+/* style of search bar */
+.search-bar{
+    text-align: center;
+    margin: 20px 0;
+}
 
+.search-bar input{
+    width: 50%;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: 2px solid;
+    border-radius: 5px;
+}
 

@@ -14,97 +14,142 @@
         <button id="theme-toggle">☀️</button>
         <!-- <button id="theme-toggle">Toggle Theme</button> -->
     </header>
+    <section class="search-bar">
+        <input type="text" id="searchInput" placeholder="search for a superbikes" onkeyup="searchBikes()">
+    </section>
 
     <section class="grid">
-        <div class="bike-card" onclick="showDetails('Yamaha R1', '1000cc, 200HP, 299km/h')">
+        <div class="bike-card" onclick="showDetails('Yamaha R1M', '1000cc, 200HP, 299km/h')">
             <img src="R1M.jpg" alt="Yamaha R1" />
-            <h3>Yamaha R1</h3>
+            <h3>Yamaha R1M</h3>
+            <button onclick="playSound(event, 'sounds/yamaha_r1m_sound.mp3')">🔊 Hear Sound</button>
         </div>
+
         <div class="bike-card" onclick="showDetails('Ducati Panigale V4', '1103cc, 214HP, 310km/h')">
             <img src="V4.jpg" alt="Ducati Panigale V4" />
             <h3>Ducati Panigale V4</h3>
+            <button onclick="playSound(event, 'sounds/Ducati Panigale V4 Sound.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('Kawasaki Ninja H2', '998cc, 231HP, 337km/h')">
             <img src="H2.jpg" alt="Kawasaki Ninja H2" />
             <h3>Kawasaki Ninja H2</h3>
+            <button onclick="playSound(event, 'sounds/Ninja H2 Cold Start.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('BMW S1000RR', '999cc, 205HP, 303km/h')">
             <img src="s1000rr.jpg" alt="BMW S1000RR" />
             <h3>BMW S1000RR</h3>
+            <button onclick="playSound(event, 'sounds/s1000rr.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('Suzuki Hayabusa', '1340cc, 187HP, 312km/h')">
             <img src="BUSA.jpg" alt="Suzuki Hayabusa" />
             <h3>Suzuki Hayabusa</h3>
+            <button onclick="playSound(event, 'sounds/hayabusa_roli.mp3')">🔊 Hear Sound</button>
         </div>
 
         <!-- Additional Superbikes -->
         <div class="bike-card" onclick="showDetails('Honda CBR1000RR-R', '999cc, 217HP, 299km/h')">
             <img src="Honda CBR1000RR-R.jpg" alt="Honda CBR1000RR-R" />
             <h3>Honda CBR1000RR-R</h3>
+            <button onclick="playSound(event, 'sounds/CBR1000RRR.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('Aprilia RSV4 1100', '1099cc, 217HP, 305km/h')">
             <img src="Aprilia RSV4 1100.jpg" alt="Aprilia RSV4 1100" />
             <h3>Aprilia RSV4 1100</h3>
+            <button onclick="playSound(event, 'sounds/RSV4.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('MV Agusta F4', '998cc, 212HP, 312km/h')">
             <img src="MV Agusta F4.jpg" alt="MV Agusta F4" />
             <h3>MV Agusta F4</h3>
+            <button onclick="playSound(event, 'sounds/MV AGUSTA F4.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('KTM RC 8C', '889cc, 135HP, 290km/h')">
             <img src="KTM RC 8C.jpg" alt="KTM RC 8C" />
             <h3>KTM RC 8C</h3>
+            <button onclick="playSound(event, 'sounds/RC 8c.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('Triumph Daytona 765', '765cc, 130HP, 265km/h')">
             <img src="Triumph Daytona 765.jpg" alt="Triumph Daytona 765" />
             <h3>Triumph Daytona 765</h3>
+            <button onclick="playSound(event, 'sounds/daytona.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('Yamaha MT-10', '998cc, 160HP, 245km/h')">
             <img src="Yamaha MT-10.jpg" alt="Yamaha MT-10" />
             <h3>Yamaha MT-10</h3>
+            <button onclick="playSound(event, 'sounds/MT10.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('Ducati Streetfighter V4', '1103cc, 208HP, 299km/h')">
             <img src="Ducati Streetfighter V4.jpg" alt="Ducati Streetfighter V4" />
             <h3>Ducati Streetfighter V4</h3>
+            <button onclick="playSound(event, 'sounds/Ducati v4.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('Kawasaki ZX-10R', '998cc, 203HP, 299km/h')">
             <img src="Kawasaki ZX-10R.jpg" alt="Kawasaki ZX-10R" />
             <h3>Kawasaki ZX-10R</h3>
+            <button onclick="playSound(event, 'sounds/zx10r.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('BMW M1000RR', '999cc, 212HP, 306km/h')">
             <img src="BMW M1000RR.jpg" alt="BMW M1000RR" />
             <h3>BMW M1000RR</h3>
+            <button onclick="playSound(event, 'sounds/M1000rr.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('Suzuki GSX-R1000', '999cc, 199HP, 300km/h')">
             <img src="Suzuki GSX-R1000.jpg" alt="Suzuki GSX-R1000" />
             <h3>Suzuki GSX-R1000</h3>
+            <button onclick="playSound(event, 'sounds/GSXR-1000.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('Honda Fireblade SP', '999cc, 214HP, 299km/h')">
             <img src="Honda Fireblade SP.jpg" alt="Honda Fireblade SP" />
             <h3>Honda Fireblade SP</h3>
+            <button onclick="playSound(event, 'sounds/Sp.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('Aprilia Tuono V4', '1077cc, 175HP, 280km/h')">
             <img src="Aprilia Tuono V4.jpg" alt="Aprilia Tuono V4" />
             <h3>Aprilia Tuono V4</h3>
+            <button onclick="playSound(event, 'sounds/tuono v4.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('MV Agusta Brutale 1000 RR', '998cc, 208HP, 305km/h')">
             <img src="MV Agusta Brutale 1000 RR.jpg" alt="MV Agusta Brutale 1000 RR" />
             <h3>MV Agusta Brutale 1000 RR</h3>
+            <button onclick="playSound(event, 'sounds/MV Agusta Brutale 1000RR.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('KTM 1390 Super Duke R', '1301cc, 180HP, 289km/h')">
             <img src="KTM 1290 Super Duke R.jpg" alt="KTM 1290 Super Duke R" />
             <h3>KTM 1390 Super Duke R</h3>
+            <button onclick="playSound(event, 'sounds/super Duke 1390.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('Triumph Speed Triple 1200 RR', '1160cc, 178HP, 270km/h')">
             <img src="Triumph Speed Triple 1200 RR.jpg" alt="Triumph Speed Triple 1200 RR" />
             <h3>Triumph Speed Triple 1200 RR</h3>
+            <button onclick="playSound(event, 'sounds/1200RR.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('Yamaha R7', '689cc, 73HP, 220km/h')">
             <img src="Yamaha R7.jpg" alt="Yamaha R7" />
             <h3>Yamaha R7</h3>
+            <button onclick="playSound(event, 'sounds/R7.mp3')">🔊 Hear Sound</button>
         </div>
+        
         <div class="bike-card" onclick="showDetails('Ducati Monster 1200', '1198cc, 147HP, 255km/h')">
             <img src="Ducati Monster 1200.jpg" alt="Ducati Monster 1200" />
             <h3>Ducati Monster 1200</h3>
+            <button onclick="playSound(event, 'sounds/Ducati Monster 1200 R.mp3')">🔊 Hear Sound</button>
         </div>
     </section>
 
@@ -138,9 +183,10 @@
     </div>
 
     <div id="comparison-result" class="comparison-table">
-        <!-- Bike details will be displayed here -->
+        <!-- Comparison results will appear here -->
     </div>
 </section>
+
 
 
     

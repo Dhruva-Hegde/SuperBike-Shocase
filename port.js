@@ -116,7 +116,7 @@ function compareBikes() {
 
 
 const bikeData = {
-    "Yamaha R1": {
+    "Yamaha R1M": {
         img: "R1M.jpg",
         specs: "1000cc, 200HP, 299km/h",
         description: "The Yamaha YZF-R1 is a high-performance superbike featuring cutting-edge technology from MotoGP.",
@@ -270,3 +270,51 @@ function showDetails(bikeName) {
 function closeDetails() {
     document.getElementById("bike-details").classList.remove("show");
 }
+
+
+function searchBikes() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const bikeCards = document.getElementsByClassName("bike-card");
+
+    for (let i = 0; i < bikeCards.length; i++) {
+        const bikeName = bikeCards[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+        if (bikeName.includes(input)) {
+            bikeCards[i].style.display = "";
+        } else {
+            bikeCards[i].style.display = "none";
+        }
+    }
+}
+
+
+let currentAudio = null; // Global variable to track the current audio
+
+function playSound(event, soundFile) {
+    event.stopPropagation(); // Prevent triggering the modal
+    
+    // Stop and reset the previous audio if it's playing
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+
+    // Create a new audio instance and play it
+    currentAudio = new Audio(soundFile);
+    currentAudio.play();
+
+    // Automatically stop the audio after 10 seconds
+    setTimeout(() => {
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+        }
+    }, 15000); // 15,000 milliseconds = 15 seconds
+}
+
+// Stop audio when clicking anywhere on the page
+document.body.addEventListener('click', () => {
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+});
